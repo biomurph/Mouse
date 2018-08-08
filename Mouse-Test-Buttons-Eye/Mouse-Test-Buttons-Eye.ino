@@ -1,9 +1,13 @@
 /*
 
-  Mouse Eye X Y reader
-  Written by Joel Murphy for Rachel's Electronics
-  Released into the wild. Fall, 2010
+  Mouse test code
+  Used for testing mouse eye and mouse buttons (R,L)
+  Works in serial mode
+  Needs testing in HID mode
 
+  
+  biomurph Summer 2018
+  
 */
 #include "MouseDefinitions.h"
 #include <Mouse.h>
@@ -14,15 +18,12 @@ boolean stopped = false;
 boolean hid = false;
 
 void setup() {
-//  Serial.begin(115200);
   delay(1000);
-//  Serial.println("Mouse Test 01");
   setPins();
   
   hid = digitalRead(HID_SELECT);
   if(hid){
     Mouse.begin();
-//    Serial.println("hid");
   } else {
     Serial.begin(115200);
     Serial.println("not hid");
