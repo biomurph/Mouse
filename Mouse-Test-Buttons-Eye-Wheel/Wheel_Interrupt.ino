@@ -1,12 +1,12 @@
 
-volatile byte wheelState = 0x00;     // holds the state of A and B 
+volatile byte wheelState = 0x00;     // holds the state of A and B
 volatile byte lastWheelState = 0x00; // remembers the last state of A and B
 //volatile int wheel[2] = {WHEEL_A, WHEEL_B};
 volatile boolean fwd = false;
 boolean lastDirection = false;
 //volatile boolean wheelMove = false;
-volatile int unsigned long wheelPos = 0;
-volatile int unsigned long lastWheelPos = 0;
+volatile unsigned long wheelPos = 0;
+volatile unsigned long lastWheelPos = 0;
 
 
 
@@ -17,7 +17,6 @@ void encode(){
   }
   if(wheelState != lastWheelState){
     switch(wheelState){
-  
       case 0x00:
           fwd = true;
         break;
@@ -33,33 +32,25 @@ void encode(){
       default:
         break;
     }
-  
-        if(fwd){
-          wheelPos ++;  // +=1
-        }else{
-          wheelPos --;  // -=1
-        }
-
+    if(fwd){
+      wheelPos ++;  // +=1
+    }else{
+      wheelPos --;  // -=1
+    }
     wheelDelta = wheelPos - lastWheelPos;
-
     lastWheelPos = wheelPos;
-    lastWheelState = wheelState;  
+    lastWheelState = wheelState;
     wheelMove = true;
     }
-      
-   
-    
   }
 
 void checkWheel(){
   if(wheelMove){
-    
-    if(hid){
-      updateMouse = true;
-    }else{
-      Serial.println(wheelDelta);
-    }
-    wheelMove = false;
+	wheelMove = false;
+  if(hid){
+    updateMouse = true;
+  }else{
+    Serial.println(wheelDelta);
+  }
   }
 }
-
