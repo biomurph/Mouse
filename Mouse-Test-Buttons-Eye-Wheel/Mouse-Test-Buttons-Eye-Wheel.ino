@@ -5,9 +5,9 @@
   Works in serial mode
   Needs testing in HID mode
 
-  
+
   biomurph Summer 2018
-  
+
 */
 #include "MouseDefinitions.h"
 #include <Mouse.h>
@@ -15,7 +15,7 @@
 MouseEye eye(ADNS_SCK, ADNS_SDIO);   // SCK on pin 9, SDIO on pin 8
 boolean stopped = false;
 
-boolean hid = false;
+boolean hid = false;	// HID status is updated in setup
 
 volatile boolean wheelMove = false;
 volatile int wheelDelta = 0;
@@ -24,39 +24,32 @@ boolean updateMouse = false;
 
 void setup() {
   delay(1000);
-  setPins();
-  
+  setPins();	// initialize pins
+
   hid = digitalRead(HID_SELECT);
   if(hid){
     Mouse.begin();
   } else {
     Serial.begin(115200);
     Serial.println("not hid");
-    Serial.println("Mouse Test 01");
+    Serial.println("Mouse Test B-E-W");
   }
-  for(int i=0; i<2; i++){
-    pinMode(wheel[i],INPUT);
-  }
-  attachInterrupt(digitalPinToInterrupt(WHEEL_A), encode, CHANGE);
 }
 
 
 void loop() {
-  
+
   checkEye();
-
   checkWheel();
-
-  if(updateMouse){
+  if(updateMouse){ // upsdateMouse is set in checkEye() and/or checkWheel()
     updateMouse = false;
     Mouse.move(eye.deltaX, eye.deltaY, wheelDelta);
   }
-
   checkButtons(); // send pressed and released on button events
-  
-  if(!hid){ eventSerial(); }
 
-  delay(10);
+  if(!hid){ eventSerial(); }	// option to talk to mouse
+
+  delay(10); // is this necessary?
 }
 
 
@@ -69,5 +62,8 @@ void setPins() {
   pinMode(HID_SELECT, INPUT);
   pinMode(WHEEL_A, INPUT);
   pinMode(WHEEL_B, INPUT);
+	for(int i=0; i<2; i++){
+    pinMode(wheel[i],INPUT);
+  }
+  attachInterrupt(digitalPinToInterrupt(WHEEL_A), encode, CHANGE);
 }
-
