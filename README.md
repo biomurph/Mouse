@@ -12,3 +12,5 @@ Use the example in the Mousey library to test the one-library-to-rule-them-all
 
 ## Anatomy of Mouse
 ![mousePrototype](images/mousePrototype.jpg)
+
+napkin sketch
