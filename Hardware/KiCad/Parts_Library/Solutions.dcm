@@ -1,0 +1,42 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADS1291/2
+D AFE for ECG
+K AFE ECG ADS
+$ENDCMP
+#
+$CMP BSS84_PMOS_GSD
+D Transistor P-MOSFET with substrate diode (general)
+K pmos p-mos p-mosfet transistor
+$ENDCMP
+#
+$CMP Dialight_R_G_LED
+D DOUBLE type Bicolore
+K LED
+$ENDCMP
+#
+$CMP Led_RGB_CA
+D Common Anode RGB LED
+K RGB LED
+$ENDCMP
+#
+$CMP MAX30100
+D Integrated Sp02 & PPG
+K MAX30100
+$ENDCMP
+#
+$CMP MCP73831
+D LiPo Battery Charger
+$ENDCMP
+#
+$CMP MK66FX1M0VMD18
+D ARM Microcontrollers - MCU BL Microcontrollers
+F http://cache.freescale.com/files/shared/doc/package_info/98ASA00222D.pdf
+$ENDCMP
+#
+$CMP PCA9508
+D I2C Level Shifter
+F http://www.mouser.com/ds/2/302/PCA9508-841623.pdf
+$ENDCMP
+#
+#End Doc Library
