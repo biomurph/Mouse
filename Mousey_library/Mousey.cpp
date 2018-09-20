@@ -18,9 +18,9 @@ boolean Mousey::start()
 	// _SCK = SCK;	// keep track of the clock pin
   // _SDIO = SDIO;	// keep track of the data  pin
 	//	SET PIN DIRECTION
-  pinMode(SDIO, INPUT);
-  pinMode(SCK, OUTPUT);
-  digitalWrite(SCK,HIGH);	//clock idles high
+  // pinMode(SDIO, INPUT);
+  // pinMode(SCK, OUTPUT);
+  // digitalWrite(SCK,HIGH);	//clock idles high
 
   hid = digitalRead(HID_SELECT);
   if(hid){
@@ -29,7 +29,7 @@ boolean Mousey::start()
     Serial.begin(115200);
 		delay(1000);
     Serial.println("not hid");
-    Serial.println("Mouse Test B-E-W");
+    Serial.println("Mousey Library");
   }
 	return true;
 }
@@ -40,37 +40,54 @@ void Mousey::update(){
   checkButtons(); // sends pressed and released on button events
   if(updateMouse){
     updateMouse = false;
-    Mouse.move(deltaX, deltaY, wheelDelta);
+		if(hid){
+	    Mouse.move(deltaX, deltaY, wheelDelta);
+		}else{	// if !hid send the data to serial terminal
+			Serial.print(eye.deltaX,DEC);Serial.print('\t');
+		  Serial.print(eye.deltaY,DEC);Serial.print('\t');
+		  Serial.print(wheelDelta);Serial.print('\n');
+		}
+		wheelDelta = 0;	// reset wheelDelta so we don't keep scrolling!
   }
 
   if(!hid){ eventSerial(); }	// option to talk to mouse
 }
 
+/*
+	WHEN MOUSE EYS SEES MOVEMENT updateMouse is set
+*/
+
 void Mousey::checkEye() {
   getMouseEyeDelta();      // update deltaX and deltaY variables
   if (deltaX != 0 || deltaY != 0) { //when mouse is moving
-    if (hid) {
-      updateMouse = true;
-    } else {
-      Serial.print(deltaX, DEC);               //when mouse is moving
-      Serial.print("\t");                          //pirnt the delta X and Y
-      Serial.println(deltaY, DEC);
-    }
+    // if (hid) {
+      updateMouse = true;	// updateMouse can be set here or by checkWheel
+    // } else {
+    //   Serial.print(deltaX, DEC);               //when mouse is moving
+    //   Serial.print("\t");                          //pirnt the delta X and Y
+    //   Serial.println(deltaY, DEC);
+    // }
   }
 }
 
+/*
+	POLLS THE wheelMove BOOLEAN, WHICH IS SET IN encode()
+
+*/
 void Mousey::checkWheel(){
-  if(wheelMove){
-	wheelMove = false;
-  if(hid){
-    updateMouse = true;
-  }else{
-    Serial.println(wheelDelta);
-  }
+  if(wheelMoved){
+		wheelMoved = false;
+  // if(hid){
+    updateMouse = true;	// updateMouse can be set here or by the checkEye
+  // }else{
+  //   Serial.println(wheelDelta);
+  // }
   }
 }
 
-
+/*
+	CHECKS BUTTON STATE USING A millis() TIMER
+*/
 void Mousey::checkButtons() {
   int button;
   for(int i=0; i<2; i++){
@@ -81,7 +98,6 @@ void Mousey::checkButtons() {
       lastButtonState[i] = button;
     }
   }
-
   if((millis() - lastBounce) > bounceDelay) {
     switch(bounce){
       case 0:
@@ -97,29 +113,34 @@ void Mousey::checkButtons() {
     }
     bounce = 0;
   }
-
 }
 
-
+/*
+	SENDS THE BUTTON STATE AS HID OR TO SERIAL PORT
+	BUTTONS USE INTERNAL PULLUPS
+	HIGH IS RELEASE, LOW IS PRESS
+*/
 void Mousey::sendButton(int activeButton, int state){
-  if(state){
+	if(!hid){ Serial.print(activeButton); Serial.print(" ");}
+  if(state){	//
     if(hid){
       Mouse.release(activeButton);
     } else {
-      Serial.print(state);
+      Serial.println(state);
     }
   } else {
     if(hid){
       Mouse.press(activeButton);
     } else {
-      Serial.print(state);
+      Serial.println(state);
     }
   }
-  if(!hid){ Serial.print(" ");Serial.println(activeButton); }
-
 }
 
-// this is  the ISR. Not sure how to handle it ?
+/*
+	ENCODE IS CALLED FROM THE ISR IN THE .ino FILE
+	TODO: MOVE THE attachInterrupt AND ISR INTO THE LIBRARY
+*/
 void Mousey::encode(){
   wheelState = 0x00;
   for(int i=0; i<2; i++){
@@ -150,9 +171,13 @@ void Mousey::encode(){
     wheelDelta = wheelPos - lastWheelPos;
     lastWheelPos = wheelPos;
     lastWheelState = wheelState;
-    wheelMove = true;
+    wheelMoved = true;
     }
   }
+
+/*
+	THE FOLLOWING FUNCTIONS COMMUNICATE WITH THE ADNS2620
+*/
 
 void Mousey::getMouseEyeDelta()
 {
@@ -277,6 +302,9 @@ void Mousey::setPins()
   pinMode(HID_SELECT, INPUT);
   pinMode(WHEEL_A, INPUT);
   pinMode(WHEEL_B, INPUT);
+	pinMode(SDIO, INPUT);
+  pinMode(SCK, OUTPUT);
+  digitalWrite(SCK,HIGH);	//clock idles high
 	for(int i=0; i<2; i++){
     pinMode(wheel[i],INPUT);
   }

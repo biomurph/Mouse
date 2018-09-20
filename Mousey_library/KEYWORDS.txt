@@ -34,3 +34,4 @@ encode	KEYWORD2
 checkButtons	KEYWORD2
 checkWheel	KEYWORD2
 update	KEYWORD2
+start	KEYWORD2

@@ -47,6 +47,7 @@ public:
     void Frame_Period_Write(short);
     void Pixel_Data();
     byte Pixel_Data_Read();
+		volatile boolean wheelMoved = false;
 
     char deltaX;
     char deltaY;
@@ -62,7 +63,6 @@ private:
 		//volatile boolean wheelMove = false;
 		volatile unsigned long wheelPos = 0;
 		volatile unsigned long lastWheelPos = 0;
-		volatile boolean wheelMove = false;
 		volatile int wheelDelta = 0;
 		volatile int wheel[2] = {WHEEL_A, WHEEL_B};
 		boolean updateMouse = false;
