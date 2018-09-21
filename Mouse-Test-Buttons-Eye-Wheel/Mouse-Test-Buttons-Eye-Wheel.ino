@@ -18,7 +18,7 @@ boolean stopped = false;
 boolean hid = false;	// HID status is updated in setup
 
 volatile boolean wheelMove = false;
-volatile int wheelDelta = 0;
+volatile int deltaWheel = 0;
 volatile int wheel[2] = {WHEEL_A, WHEEL_B};
 boolean updateMouse = false;
 
@@ -43,7 +43,9 @@ void loop() {
   checkWheel();
   if(updateMouse){ // upsdateMouse is set in checkEye() and/or checkWheel()
     updateMouse = false;
-    Mouse.move(eye.deltaX, eye.deltaY, wheelDelta);
+    Mouse.move(eye.deltaX, eye.deltaY, deltaWheel);
+    deltaWheel = 0;
+    
   }
   checkButtons(); // send pressed and released on button events
 

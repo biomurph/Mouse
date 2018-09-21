@@ -37,7 +37,7 @@ void encode(){
     }else{
       wheelPos --;  // -=1
     }
-    wheelDelta = wheelPos - lastWheelPos;
+    deltaWheel = wheelPos - lastWheelPos;
     lastWheelPos = wheelPos;
     lastWheelState = wheelState;
     wheelMove = true;
@@ -50,7 +50,7 @@ void checkWheel(){
   if(hid){
     updateMouse = true;
   }else{
-    Serial.println(wheelDelta);
+    Serial.println(deltaWheel);
   }
   }
 }
