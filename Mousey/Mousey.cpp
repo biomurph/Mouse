@@ -290,15 +290,15 @@ void Mousey::writeDNS(byte high, byte low){
 */
 void Mousey::setPins()
 {
-	pinMode(LEFT, INPUT);
-  pinMode(RIGHT, INPUT);
-  pinMode(HID_SELECT, INPUT);
-  pinMode(WHEEL_A, INPUT);
-  pinMode(WHEEL_B, INPUT);
+	pinMode(LEFT, INPUT_PULLUP);
+  pinMode(RIGHT, INPUT_PULLUP);
+  pinMode(HID_SELECT, INPUT_PULLUP);
+  pinMode(WHEEL_A, INPUT_PULLUP);
+  pinMode(WHEEL_B, INPUT_PULLUP);
 	pinMode(SDIO, OUTPUT); digitalWrite(SDIO,HIGH); // data idles high
   pinMode(SCK, OUTPUT); digitalWrite(SCK,HIGH);	//clock idles high
 	for(int i=0; i<2; i++){
-    pinMode(wheel[i],INPUT);
+    pinMode(wheel[i],INPUT_PULLUP);
   }
   // attachInterrupt(digitalPinToInterrupt(WHEEL_A), encode, CHANGE);
 }
