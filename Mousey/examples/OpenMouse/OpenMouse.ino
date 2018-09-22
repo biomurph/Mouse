@@ -13,7 +13,7 @@ void setup(){
 
 void loop(){
 	mouse.update();
-	delay(5);
+	delay(10);
 }
 
 void wheel_ISR(){
