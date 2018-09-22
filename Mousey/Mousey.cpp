@@ -1,4 +1,7 @@
+/*
 
+
+*/
 
 
 
@@ -12,7 +15,7 @@ Mousey::Mousey(){
 boolean Mousey::start()
 {
 	delay(1000);	// necessary for ADNS!
-	
+
   hid = digitalRead(HID_SELECT);	// check if we are in HID mode
   if(hid){
     Mouse.begin();

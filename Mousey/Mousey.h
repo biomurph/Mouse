@@ -31,7 +31,6 @@ public:
 		void checkButtons(void);
 		void sendButton(int,int);
 		void encode(void);
-
 		void getMouseEyeDelta();
     uint8_t Config_Read();
     void Config_Write(uint8_t);
@@ -46,7 +45,6 @@ public:
     void Pixel_Data();
     byte Pixel_Data_Read();
 		volatile boolean wheelMoved = false;
-
     char deltaX;
     char deltaY;
 
@@ -69,18 +67,11 @@ private:
 		long lastBounce = 0;            // the last time the output pin was toggled
 		unsigned long bounceDelay = 10;          // the debounce time; increase if the output flickers
 		int bounce = 0;
-
-		// int _SCK;
-    // int _SDIO;
     uint8_t b;
     uint8_t sUpper;
     uint8_t sLower;
     void writeDNS(byte, byte);	// write data to ADNS register
     uint8_t readDNS(uint8_t);		// read data from ADNS register
 };
-
-		// MouseEye eye(ADNS_SCK,ADNS_SDIO);
-
-		// attachInterrupt(digitalPinToInterrupt(WHEEL_A), encode, CHANGE);
 
 #endif
