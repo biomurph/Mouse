@@ -40,9 +40,9 @@ void Mousey::update(){
 		if(hid){
 	    Mouse.move(deltaX, deltaY, wheelDelta);
 		}else{	// if !hid send the data to serial terminal
-			Serial.print(deltaX,DEC);Serial.print('\t');
-		  Serial.print(deltaY,DEC);Serial.print('\t');
-		  Serial.print(wheelDelta);Serial.print('\n');
+			Serial.print("x ");Serial.print(deltaX,DEC);Serial.print('\t');
+		  Serial.print("y ");Serial.print(deltaY,DEC);Serial.print('\t');
+		  Serial.print("w ");Serial.print(wheelDelta);Serial.print('\n');
 		}
 		wheelDelta = 0;	// reset wheelDelta so we don't keep scrolling!
   }
@@ -108,7 +108,7 @@ void Mousey::checkButtons() {
 	HIGH IS RELEASE, LOW IS PRESS
 */
 void Mousey::sendButton(int activeButton, int state){
-	if(!hid){ Serial.print(activeButton); Serial.print(" ");}
+	if(!hid){ Serial.print("button "); Serial.print(activeButton); Serial.print(" = "); }
   if(state){	//
     if(hid){
       Mouse.release(activeButton);
