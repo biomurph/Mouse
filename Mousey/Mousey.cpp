@@ -103,7 +103,7 @@ void Mousey::checkButtons() {
 }
 
 /*
-	SENDS THE BUTTON STATE AS HID OR TO SERIAL PORT
+	SENDS THE BUTTON STATE AS HID OR TO SERIAL TERMINAL
 	BUTTONS USE INTERNAL PULLUPS
 	HIGH IS RELEASE, LOW IS PRESS
 */
@@ -197,13 +197,13 @@ uint8_t Mousey::Status()
 int Mousey::Squal()
 {
 	b = readDNS(0x44);
-	return b;
+	return b*2;
 }
 
 uint8_t Mousey::Max_Pixel()
 {
 	b = readDNS(0x45);
-	return b*2;
+	return b;
 }
 
 uint8_t Mousey::Min_Pixel()
