@@ -8,10 +8,6 @@ into your `Documents > Arduino > libraries` folder. Open or restart Arduino, The
 goto `File > Examples > Mousey > OpenMouse` to find the sketch that runs on OpenMouse.
 
 ## Anatomy of Mouse
-![mousePrototype](images/mousePrototype.jpg)
+![mousePrototype](images/mouseProduction.jpg)
 
-napkin sketch
-
-## Assemble Your Mouse!
-
-coming soon.....
+Production Version. Updates coming soooooon!
