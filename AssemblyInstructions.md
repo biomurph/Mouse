@@ -17,26 +17,26 @@
 * 1 Mouse wheel
 * 1 Mouse wheel holder
 
-### Step One: ADNS2026
+### Step One: ADNS2026 at U1
 The ADNS2026 sensor has a small piece of kapton tape covering the lens. **Do Not** remove the kapton tape until directed to by these instructions. It will protect the lens from any random goo or dust getting in there.
 
 Solder the ADNS2026 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect position of the ADNS will cause the mouse to fail!
 
-Place the PCB flat side down on a smooth surface, and then put the ADNS legs into the PCB holes. Make sure that the ends of the ADNS legs are touching the surface of the table. The ADNS will be 'standingh up' above the PCB. **NOTE THE ORIENTATION OF THE PIN 1 MARKING!** Once you have the part oriented correctly and the legs are touching the table top through the PCB holes with the PCB flat on the table top, go ahead and solder each leg from the top.
+Place the PCB flat side down on a smooth surface, and then put the ADNS legs into the PCB holes. Make sure that the ends of the ADNS legs are touching the surface of the table. The ADNS will be 'standing up' above the PCB. **NOTE THE ORIENTATION OF THE ADNS!** Pin 1 is marked by a small round circle in one corner of the IC, and Pin 4 is marked by the large round circle that I'm pointing to. Once you have the part oriented correctly and the legs are touching the table top through the PCB holes with the PCB flat on the table top, go ahead and solder each leg from the top.
 
-### Step Two: Resonator
+### Step Two: Resonator at Y1
 The blue resonator fits in right next to the ADNS and it doesn't have any orientation. It can go either direction.
 
-### Step Three: LED
+### Step Three: LED at D1
 The LED is oriented with the long leg toward the middle of the board. The leads of the LED need to be bent at 90 degrees so that it will point toward the ADNS sensor.
 
-### Step Four: Headers
+### Step Four: Headers at J5 and J6
 Next, solder in the two 7 pin female headers. The PCB should sit flat on them upside down for easy soldering. Get one leg of each header soldered, and then turn over to board to make sure that the headers are sitting straight. Adjust as necessary by remelting the pin you soldered, then solder the rest of the pins.
 
-### Step Five: Encoder
+### Step Five: Encoder at U2
 The encoder for the mouse wheel only goes in one way. There are two large clip leads on the sides. **Make sure that the encoder is inserted all the way** so that the base of the encoder sides is touching the top of the PCB. This will ensure that the wheel and wheel support will fit correctly later.
 
-### Step Six: Buttons
+### Step Six: Buttons at SW2 and SW3
 The two pushbutton switches only fit one way. The legs will snap into the PCB and hold them there for you to solder them.
 
 ### Step Seven: Lens
