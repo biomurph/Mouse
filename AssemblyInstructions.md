@@ -23,7 +23,7 @@ The ADNS2026 sensor has a small piece of kapton tape covering the lens. **Do Not
 
 Solder the ADNS2026 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect position of the ADNS will cause the mouse to fail!
 
-![ADNS_2](images/MouseParts-_0010_02 better.jpg)
+![ADNS_2](images/MouseParts-_0010_02better.jpg)
 Place the PCB flat side down on a smooth surface, and then put the ADNS legs into the PCB holes. Make sure that the ends of the ADNS legs are touching the surface of the table. The ADNS will be 'standing up' above the PCB. **NOTE THE ORIENTATION OF THE ADNS!** Pin 1 is marked by a small round circle in one corner of the IC, and Pin 4 is marked by the large round circle that I'm pointing to.
 
 ![ADNS_3](images/MouseParts-_0008_05.jpg)
