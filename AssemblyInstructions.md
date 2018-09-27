@@ -21,7 +21,7 @@
 ![ADNS_1](images/MouseParts-_0011_01.jpg)
 The ADNS2026 sensor has a small piece of kapton tape covering the lens. **Do Not** remove the kapton tape until directed to by these instructions. It will protect the lens from any random goo or dust getting in there.
 
-Solder the ADNS2026 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect position of the ADNS will cause the mouse to fail!
+Solder the ADNS2026 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect vertical position of the ADNS will cause the mouse to fail!
 
 ![ADNS_2](images/MouseParts-_0010_02better.jpg)
 Place the PCB flat side down on a smooth surface, and then put the ADNS legs into the PCB holes. Make sure that the ends of the ADNS legs are touching the surface of the table. The ADNS will be 'standing up' above the PCB. **NOTE THE ORIENTATION OF THE ADNS!** Pin 1 is marked by a small round circle in one corner of the IC, and Pin 4 is marked by the large round circle that I'm pointing to.
@@ -36,7 +36,7 @@ The blue resonator fits in right next to the ADNS and it doesn't have any orient
 ## Step Three: LED at D1
 ![LED_orient](images/MouseParts-_0003_10.jpg)
 The LED is oriented with the long leg toward the middle of the board.
-![LED_bent](images/MouseParts-_0041_12 - yep.jpg)
+![LED_bent](images/MouseParts-_0041_12-yep.jpg)
  The leads of the LED need to be bent at 90 degrees so that it will point toward the ADNS sensor.
 
 ## Step Four: Headers at J5 and J6
