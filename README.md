@@ -2,7 +2,7 @@
 ![MouseyMouse](images/gifyMouse.gif)
 
 ### Repository for Open Source Mouse Firmware and Hardware
-This repository holds the Arduino library, KiCAD PCB design files, gerber production files, BOM, and assembly instructions for the open-source computer mouse goodie bag item from the 2018 OSHWA Summit. The circuit design, PCB layout, and code were produced by Joel Murphy (aka biomurph | @SafeForRobots) in the Summer of 2018. The mouse wheel and wheel holder were designed in collaboration with Eugene Chang, and manufactured by [Tangible Creative](https://www.tangiblecreative.com). The production PCB boards were fabricated and stuffed by [Worthington Assembly](https://www.worthingtonassembly.com/). Thanks to Kelly Saxton for help in kitting and assembly instructions. The microcontroller on board is a ATmega32u4 with Arduino Leonardo bootloader. This open-source mouse is a soldering kit, and comes pre-programmed with the example sketch from the Mousey Arduino library.
+This repository holds the Arduino library, KiCAD PCB design files, gerber production files, BOM, and assembly instructions for the open-source computer mouse goodie bag item from the 2018 OSHWA Summit. The circuit design, PCB layout, and code were produced by Joel Murphy (aka biomurph | @SafeForRobots) in the Summer of 2018. The mouse wheel and wheel holder were designed in collaboration with Eugene Chang, and manufactured by [Tangible Creative](https://www.tangiblecreative.com). The production PCB boards were fabricated and stuffed by [Worthington Assembly](https://www.worthingtonassembly.com/). Thanks to Kelly Saxton for help in kitting and assembly instructions and the killer mouse morph gif! The microcontroller on board is a ATmega32u4 with Arduino Leonardo bootloader. This open-source mouse is a soldering kit, and comes pre-programmed with the example sketch from the Mousey Arduino library.
 
 #### Assembly Instructions [Here](https://github.com/biomurph/Mouse/blob/master/AssemblyInstructions.md)
 #### Library Functionality [Here](https://github.com/biomurph/Mouse/blob/master/LibraryFunctionality.md)
@@ -20,7 +20,7 @@ into your `Documents > Arduino > libraries` folder. Open or restart Arduino, The
 goto `File > Examples > Mousey > OpenMouse` to find the sketch that runs on OpenMouse.
 
 # Use Your Mouse
-This open-source computer mouse is buit around an ATmega32u4 with the Arduino Leonardo bootloader. It has already been programmed with the example sketch from the Mousey library. There are two modes of operation HID and Not-HID. Modes are selected using the slide switch on the left side of the mouse.
+This open-source computer mouse is built around an ATmega32u4 with the Arduino Leonardo bootloader. It has already been programmed with the example sketch from the Mousey library. There are two modes of operation HID and Not-HID. Modes are selected using the slide switch on the left side of the mouse.
 
 ## HID Mode
 When the slide switch is on the side closest to the pad per hole prototyping area (aka DOWN), the mouse is in HID mode. When plugged into a micro USB cable, the mouse will read the sensors (wheel, buttons, optical sensor), and function just like a mouse attached to your computer!

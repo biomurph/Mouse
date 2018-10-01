@@ -83,29 +83,34 @@ void Mousey::checkButtons() {
       lastBounce = millis();
       bounce = i+1; //
       lastButtonState[i] = button;
+			buttonChange = true;
     }
   }
-  if((millis() - lastBounce) > bounceDelay) {
-    switch(bounce){
-      case 0:
-        break;
-      case 1:
-        sendButton(MOUSE_LEFT, lastButtonState[0]);
-        break;
-      case 2:
-        sendButton(MOUSE_RIGHT, lastButtonState[1]);
-        break;
-      default:
-        break;
-    }
-    bounce = 0;
-  }
+	if(buttonChange){
+	  if((millis() - lastBounce) > bounceDelay) {
+	    switch(bounce){
+	      case 0:
+	        break;
+	      case 1:
+	        sendButton(MOUSE_LEFT, lastButtonState[0]);
+	        break;
+	      case 2:
+	        sendButton(MOUSE_RIGHT, lastButtonState[1]);
+	        break;
+	      default:
+	        break;
+	    }
+			buttonChange = false;
+	    bounce = 0;
+	  }
+	}
 }
 
 /*
 	SENDS THE BUTTON STATE AS HID OR TO SERIAL TERMINAL
 	BUTTONS USE INTERNAL PULLUPS
 	HIGH IS RELEASE, LOW IS PRESS
+	TODO reduce the serial print statements, make function more efficient
 */
 void Mousey::sendButton(int activeButton, int state){
 	if(!hid){ Serial.print("button "); Serial.print(activeButton); Serial.print(" = "); }
