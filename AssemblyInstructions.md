@@ -95,7 +95,7 @@ Slide the mouse wheel shaft into the encoder hub.
 
 
 ![Wheel_3](images/MouseParts-_0014_38.jpg)
-Then, insert the mouse wheel holder into the slots from the bottom of the PCB.
+Then, insert the mouse wheel holder into the slots from the bottom of the PCB. ***be careful when doing this*** the parts have a snug fit, and if the cradle is not lined up with the wheel hub it might damage the wheel!
 
 
 ![Wheel_4](images/MouseParts-_0012_40.jpg)
