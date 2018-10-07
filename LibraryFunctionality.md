@@ -2,7 +2,7 @@
 Here is information about the user accessible functions in the Mousey library. The format of the data that is sent to the computer is determined by the HID select switch on the PCB. When the switch is set to `!HID` the mouse will send ASCII data to a serial terminal at 115200 baud whenever a mouse event occurs. When the switch is set to `HID` the mouse will use `Mouse.move`, `Mouse.pressed`, and `Mouse.released` to send mouse event data to the computer.
 
 ## update()
-update checks all of the wheel inputs and sends relevant data to the computer if the buttons are pressed or released, if the mouse wheel moves, or if the mouse itself moves. It has proved to be important to have a delay in the loop when using the Mousey library, or else the mouse will overload the computer HID receiver and it will reduce performance. Experiment has shown that a delay of 5-10 milliseconds is good enough.
+update checks all of the mouse inputs and sends relevant data to the computer if the buttons are pressed or released, if the mouse wheel moves, or if the mouse itself moves. It has proved to be important to have a delay in the loop when using the Mousey library, or else the mouse will overload the computer HID receiver and it will reduce performance. Experiment has shown that a delay of 5-10 milliseconds is good enough.
 
 ## checkEye()
 Performs the necessary functions to update the `deltaX` and `deltaY` variables if they have changed, and sets the `mouseMoved` variable if that is so.
@@ -14,7 +14,7 @@ Checks to see if the `checkWheel` flag has been set by the interrupt service rou
 Reads the mouse buttons with a timed debounce routine and if there is a change in any of the button states, it sends data to the computer.
 
 ## Wheel Encoder
-The mouse wheel encoder is of the digital switch type. There is an interrupt called `encode()` which is triggered any time one of the encoder pins change state. The function `checkWheel()` will set the variable `wheelMoved` to true if the mouse wheel has moved, and the variable `deltaWheel` will contain the movement data.
+The mouse wheel encoder is of the digital switch type. There is an interrupt service routine called `encode()` which is triggered any time one of the encoder pins change state. The function `checkWheel()` will set the variable `wheelMoved` to true if the mouse wheel has moved, and the variable `deltaWheel` will contain the movement data.
 
 ## ADNS2620 Functions
 The ADNS2026 Optical Mouse Sensor is at the heart of this open source computer mouse project. The Mousey library contains user accessible functions to access it's power. Here's a list of those functions and what they do. A copy of the ADNS2620 Datasheet can be found in the Hardware folder of this repository.
