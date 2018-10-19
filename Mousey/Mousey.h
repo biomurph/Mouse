@@ -67,7 +67,7 @@ private:
 		long lastBounce = 0;            // the last time the output pin was toggled
 		unsigned long bounceDelay = 10;          // the debounce time; increase if the output flickers
 		int bounce = 0;
-		boolen buttonChange = false;
+		boolean buttonChange = false;
     uint8_t b;
     uint8_t sUpper;
     uint8_t sLower;
