@@ -27,7 +27,7 @@ BoardOutlineThickness=0.15
 ModuleOutlineThickness=0.15
 [eeschema]
 version=1
-LibDir=../Mouse Eye Hardware;../library;Parts_Library
+LibDir=../Mouse/Parts_Library
 [eeschema/libraries]
 LibName1=Mouse-rescue
 LibName2=power
