@@ -17,7 +17,7 @@ Reads the mouse buttons with a timed debounce routine and if there is a change i
 The mouse wheel encoder is of the digital switch type. There is an interrupt service routine called `encode()` which is triggered any time one of the encoder pins change state. The function `checkWheel()` will set the variable `wheelMoved` to true if the mouse wheel has moved, and the variable `deltaWheel` will contain the movement data.
 
 ## ADNS2620 Functions
-The ADNS2026 Optical Mouse Sensor is at the heart of this open source computer mouse project. The Mousey library contains user accessible functions to access it's power. Here's a list of those functions and what they do. A copy of the ADNS2620 Datasheet can be found in the Hardware folder of this repository.
+The ADNS2620 Optical Mouse Sensor is at the heart of this open source computer mouse project. The Mousey library contains user accessible functions to access it's power. Here's a list of those functions and what they do. A copy of the ADNS2620 Datasheet can be found in the Hardware folder of this repository.
 
 **NOTE: The ADNS2620 has gone EOL and is no longer available. I am looking into ICs from [PixArt](http://www.pixart.com.tw/index.asp) and will update this repository with a suitable replacement sensor soon.**
 
