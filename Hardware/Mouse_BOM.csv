@@ -1,0 +1,29 @@
+Id,Designator,Package,Quantity,Designation,Manufacturer,Part Number,URL
+2,C1,C_0603,1,10uF,Murata,GRM188R60J106KE47D,
+3,"C2,C4,C6,C7,C12",C_0603,5,0.1uF,Yaego,CC0603ZRY5V7BB104,
+4,C3,C_0603,1,4.7uF,Taiyo,JMK107C6475MA-T,
+5,C5,C_0603,1,2.2uF,Yaego,CC0603ZRY5V6BB225,
+6,"C8,C11",C_0603,2,1uF,Kemet,C0603C105Z9VACTU,
+7,"C9,C10",C_0603,2,18pF,Kemet,C0603C180K5HACAUTO,
+8,"D2,D3",C_0603,2,TVS Diodes,Bourns,CG0603MLC-05E,https://www.mouser.com/ProductDetail/Bourns/CG0603MLC-05E?qs=lDok7oSghXVLNKMK69q%252bFQ%3D%3D
+9,F1,C_1812,1,FUSE,Bourns,MF-MSMF050-2,https://www.mouser.com/ProductDetail/Bourns/MF-MSMF050-2?qs=%2fha2pyFadujDIyYlSEAmAtmxzhQX2R56dU6AOyKWoF1gS%2fKyt5ZQcQ%3d%3d
+10,J1,10118193_microUSB,1,USB_OTG,Amphenol,10118193-0001LF,https://www.mouser.com/ProductDetail/Amphenol-FCI/10118193-0001LF?qs=sGAEpiMZZMulM8LPOQ%252byk2%252bTbV8%2f2X5vbPmnc7dtSS4%3d
+11,J2,Pin_Header_Straight_2x03_Pitch2.54mm_SMD,1,CONN_02X03,DNP,DNP,
+12,"L1,L2",C_0805,2,300ohm Ferrite Bead,Laird,LI0805G301R-10,https://www.mouser.com/ProductDetail/Laird/LI0805G301R-10?qs=sGAEpiMZZMtdyQheitOmRXJdVJiWCa9XidKUz3Eoh40%3d
+13,Q1,SOT-23,1,PNP Transistor,ON Semi,BC857ALT1G,https://www.mouser.com/ProductDetail/ON-Semiconductor/BC857ALT1G?qs=sGAEpiMZZMutXGli8Ay4kJTaSFKHrKTHBFfiC96ykkU%3d
+14,"R1,R3",C_0603,2,22R,Bourns,CR0603-JW-220ELF,
+15,R2,C_0603,1,33R,Panasonic,ERJ-3GEYJ330V,
+16,R4,C_0603,1,100K,Panasonic,ERJ-3GEYJ104V,
+17,"R5,R14",C_0603,2,1K,Panasonic,ERJ-3GEYJ102V,
+18,"R6,R11,R13",C_0603,3,10K,Stackpole,RNCP0603FTD10K0,
+19,SW1,PTS540_Switch,1,Tact Switch,C&K,PTS540JM035SMTRLFS,https://www.mouser.com/ProductDetail/CK/PTS540JM035SMTRLFS?qs=%2fha2pyFadugJ2JfwosneiqsF2TAY5t13hwULmiXiXOS5YjKyEKBV2OIjQ5GO4y4P
+20,Y2,Crystal_SMD_3225-4pin_3.2x2.5mm,1,16MHz Xtal,Murata,XRCGB16M000FXN1R0,https://www.mouser.com/ProductDetail/Murata-Electronics/XRCGB16M000FXN1R0?qs=sGAEpiMZZMsBj6bBr9Q9abMK2mGYOCsJrWnvrVdgFvieDkVYnX9ttw%3d%3d
+21,Y1,C_Disc_D5.0mm_W2.5mm_P5.00mm,1,24MHz,DNP,DNP,
+22,D4,C_0603,1,Red LED,ROHM,SML-D12U1WT86,https://www.mouser.com/ProductDetail/ROHM-Semiconductor/SML-D12U1WT86?qs=sGAEpiMZZMt82OzCyDsLFLIctBvjx6Vh3ApFvxGnCTs%3d
+23,SW4,SSSS810701_ALPS,1,SPDT Slide Switch,Alps,SSSS810701,https://www.mouser.com/ProductDetail/ALPS/SSSS810701?qs=%2fha2pyFaduiE%252bdzMwfk4uUaPOkxM%252bYluMos14K6bstY%3d
+24,U3,LQFP-44_10x10mm_Pitch0.8mm,1,ATMEGA32U4-MU,Microchip,ATMEGA32U4-AU,https://www.mouser.com/ProductDetail/Microchip-Technology-Atmel/ATMEGA32U4-AU?qs=sGAEpiMZZMvqv2n3s2xjsYzXfq0AWv1C4u5a33SlKLw%3d
+25,D1,LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm,1,5mm LED,DNP,DNP,
+26,U2,Mouse_Encoder,1,ENCODER-QUADRATURE,Cloukeu,9mm Mouse Encoder,https://www.aliexpress.com/item/10Pcs-5MM-7MM-9MM-11MM-13MM-Mouse-encoder-11mm-wheel-decoder/32457386770.html?spm=a2g0s.9042311.0.0.30f94c4dypTKnh
+27,"SW2,SW3",LL3301DF065QJ,2,Push Button Switch,E-Switch,LL3301DF065QJ,https://www.mouser.com/ProductDetail/E-Switch/LL3301DF065QJ?qs=%2fha2pyFaduiTQu5WjTBJaTKK%252bhpMIgmOKkv%252bW3XwopLbcvzSfSZHiQ%3d%3d
+29,"J5,J6",Pin_Header_Straight_1x07_Pitch2.54mm,2,CONN_01X07,Preci-Dip,801-87-007-10-001101,https://www.mouser.com/ProductDetail/Preci-dip/801-87-007-10-001101?qs=sGAEpiMZZMs%252bGHln7q6pm485q53MaQQ%2fml%252bJlKEhNNo%3d
+30,U1,ADNS2610,1,ADNS2610PTH,DNP,DNP,
