@@ -9,7 +9,7 @@ This repository holds the Arduino library, KiCAD PCB design files, gerber produc
 
 ## Anatomy of Mouse
 ![mouseProduction](images/mouseAnatomy.png)
-### ADNS2026 !? That Went EOL Years Ago!
+### ADNS2620 !? That Went EOL Years Ago!
 Yes, yes it did. Years ago, I tried to make a go of it in open-source hardware design, production and sales. I made something like [this](https://www.sparkfun.com/products/retired/10105) before SparkFun did, but it never got off the ground. I've been sitting on a small pile of components from those days, and this summer I decided that I have to chip away at that pile. So here you go. A fully functional computer mouse for you to hack and modify to your hearts delight. You're welcome!
 
 If you are interested in modifying the design files to bring this project up to date, the one place that I have found that still sells these kinds of optical mouse sensors is a company called [PixArt](http://www.pixart.com.tw/index.asp) that has a variety of sensors to choose from. One of my goals is to do just that, so watch this repo if you want to be among the first to know when I have a working prototype.

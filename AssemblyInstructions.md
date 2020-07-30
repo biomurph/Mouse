@@ -7,7 +7,7 @@
 ![KitContents](images/MouseParts-_0000-parts.jpg)
 
 * 1 PCB populated with SMT components
-* 1 ADNS2026 Optical Mouse sensor
+* 1 ADNS2620 Optical Mouse sensor
 * 1 Clear plastic lens for ADNS sensor
 * 1 Mouse Wheel encoder
 * 2 Red pushbutton switches
@@ -18,11 +18,11 @@
 * 1 Mouse wheel holder
 
 
-## Step One: ADNS2026 at U1
+## Step One: ADNS2620 at U1
 ![ADNS_1](images/MouseParts-_0011_01.jpg)
-The ADNS2026 sensor has a small piece of kapton tape covering the lens. **Do Not** remove the kapton tape until directed to by these instructions. It will protect the lens from any random goo or dust getting in there.
+The ADNS2620 sensor has a small piece of kapton tape covering the lens. **Do Not** remove the kapton tape until directed to by these instructions. It will protect the lens from any random goo or dust getting in there.
 
-Solder the ADNS2026 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect vertical position of the ADNS will cause the mouse to fail!
+Solder the ADNS2620 optical sensor. It is **VERY** important that this part gets soldered at the right height on the board! Incorrect vertical position of the ADNS will cause the mouse to fail!
 
 
 ![ADNS_2](images/MouseParts-_0010_02better.jpg)
