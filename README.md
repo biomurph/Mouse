@@ -6,7 +6,7 @@ This repository holds the Arduino library, KiCAD PCB design files, gerber produc
 
 #### Assembly Instructions [Here](https://github.com/biomurph/Mouse/blob/master/AssemblyInstructions.md)
 #### Library Functionality [Here](https://github.com/biomurph/Mouse/blob/master/LibraryFunctionality.md)
-#### Hardware Design Files [Here}(https://github.com/biomurph/Mouse/tree/master/Hardware)
+#### Hardware Design Files [Here](https://github.com/biomurph/Mouse/tree/master/Hardware)
 
 ## Anatomy of Mouse
 ![mouseProduction](images/mouseAnatomy.png)
