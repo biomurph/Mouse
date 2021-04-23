@@ -1,0 +1,32 @@
+###################
+# Syntax Coloring Map
+###################
+
+###################
+# Datatypes
+###################
+
+MouseEye	KEYWORD1
+
+###################
+# Methods & Functions
+###################
+
+getMouse	KEYWORD2
+Config_R	KEYWORD2
+Config_W	KEYWORD2
+Status	KEYWORD2
+Squal	KEYWORD2
+Max_P	KEYWORD2
+Min_P	KEYWORD2
+Shutter	KEYWORD2
+Pixel_Sum	KEYWORD2
+Pixel_Data	KEYWORD2
+Pixel_Data_R	KEYWORD2
+F_Period_R	KEYWORD2
+F_Period_W	KEYWORD2
+
+deltaX	KEYWORD2
+deltaY	KEYWORD2
+
+

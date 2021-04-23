@@ -112,3 +112,22 @@ When the slide switch is on the side closest to the 7 pin female header (aka UP)
 
 ## Troubleshooting
 The mice were packaged with the HID select switch in the HID position. If you plug your mouse in to a computer and it doesn't work like a mouse should, then check to make sure that the HID switch is in HID mode. The small tact switch labeled `SW1` is the reset button for the Leonardo. You can switch modes on the fly, and press this reset button to change modes without unplugging your mouse. If all else fails, re-program the mouse with the OpenMouse.ino code from the example in the Mousey Library.
+
+# OLD HARDWARE INSTRUCTIONS
+This section is for folks who have the old hardware, and is a guide for assembly. 
+
+![Mouse_Eye](images/oldMouse/MouseEye_Production.jpg)
+
+This was made years ago, and I do have a small pile of parts and PCBs, if anyone is interested, drop me a message in the issues tab.
+
+The image above is of the assembled board, showing where all the parts go. Below are all the parts, with the PCB reference numbers for your reference.
+
+![Mouse_Eye_Parts](images/oldMouse/MouseEye_Parts.jpg)
+
+This is a beginner soldering project with a trap! You ***MUST*** and that is a big must, follow the same instructions for soldering the Optical Sensor as shown above in the main instructions. That is, you must place the PCB on a flat, heat resistant surface, Then put the Optical Sensor into position so that it's legs are touching the same surface as the PCB through the solder holes. Then, solder the legs from the top of the board. This will position the Optical Sensor *exactly* at the right height. The only other thing to think about is the LED will need to be bent over at a right angle to shine in the lens, so make sure there is enough lead for the bend when you solder.
+Also, **DON'T USE CYANOACRYLATE TO GLUE THE LENS** Use regular old hot glue, or use something else but make sure no glue gets on the business part of the lens. Bad, very bad. 
+
+## Old Mouse Firmware
+This old project has less going on than the main project above. To make this work, please use the MouseEye library contained in the folder called MouseEye in this repository. It should work. Any issues, put them into the issue hole.
+
+Have Fun!
